@@ -1,0 +1,23 @@
+# deps
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# env & secrets
+.env
+.env.local
+
+# build
+.next/
+dist/
+build/
+
+# ml artifacts (kept small in repo; large ones ignored)
+*.joblib.big
+
+# os
+.DS_Store
+Thumbs.db
+desktop.ini
