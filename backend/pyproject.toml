@@ -1,6 +1,6 @@
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["."]
+pythonpath = [".", ".."]
 addopts = "-m 'not integration'"
 markers = [
     "integration: tests that require the Docker MySQL/Redis services running",
