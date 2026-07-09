@@ -3,8 +3,13 @@ import json
 import pathlib
 import sys
 
-# allow "import app" when run directly as a script (put backend/ on the path)
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "backend"))
+# allow "import app" when run directly — find the dir that holds the app package
+# (host layout: repo-root/backend/app ; container layout: /app/app)
+_here = pathlib.Path(__file__).resolve()
+for _cand in (_here.parents[1] / "backend", _here.parents[1]):
+    if (_cand / "app").is_dir():
+        sys.path.insert(0, str(_cand))
+        break
 
 from app.core.database import SessionLocal  # noqa: E402
 from app.models import Product  # noqa: E402

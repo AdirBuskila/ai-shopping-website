@@ -11,9 +11,13 @@ cp .env.example .env      # then paste your OPENAI_API_KEY into .env
 docker compose up --build
 ```
 
+That single command starts MySQL + Redis + the API, **runs database migrations,
+and auto-seeds the catalog (151 products)** — no extra steps.
+
 - API:      http://localhost:8000
 - Swagger:  http://localhost:8000/docs
 - Health:   http://localhost:8000/health
+- Products: http://localhost:8000/products
 
 ## Documentation
 

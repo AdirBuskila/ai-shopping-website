@@ -1,0 +1,13 @@
+# Build context is the repo root — keep the image lean and fast to build.
+.git/
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+node_modules/
+**/.next/
+docs/
+*.pdf
+.env
+.env.local
+frontend/
