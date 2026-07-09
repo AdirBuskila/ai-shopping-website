@@ -5,8 +5,20 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 
 from app.core.database import Base, get_db
+from app.core.redis_client import get_redis
 import app.models  # noqa: F401  registers all models on Base.metadata
 from app.main import create_app
+
+
+class _FakeCache:
+    """No-op cache: always a miss, so endpoint tests hit the DB and never
+    share state through real Redis."""
+
+    def get(self, key):
+        return None
+
+    def setex(self, key, ttl, value):
+        pass
 
 
 @pytest.fixture
@@ -50,4 +62,5 @@ def client(_engine):
 
     app = create_app()
     app.dependency_overrides[get_db] = override_get_db
+    app.dependency_overrides[get_redis] = lambda: _FakeCache()
     return TestClient(app)
