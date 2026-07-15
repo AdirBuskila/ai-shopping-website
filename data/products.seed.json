@@ -1459,7 +1459,7 @@
     "brand": "Samsung",
     "price_usd": 796.23,
     "stock": 10,
-    "image_url": "/images/products/Galaxy_S25_Plus/primary.jpg",
+    "image_url": "/images/products/Galaxy_S25/primary.jpg",
     "specs": {
       "model": "Galaxy S25+",
       "storage": "256GB",
@@ -1485,7 +1485,7 @@
     "brand": "Samsung",
     "price_usd": 958.23,
     "stock": 10,
-    "image_url": "/images/products/Galaxy_S25_Plus/primary.jpg",
+    "image_url": "/images/products/Galaxy_S25/primary.jpg",
     "specs": {
       "model": "Galaxy S25+",
       "storage": "512GB",
@@ -1511,7 +1511,7 @@
     "brand": "Apple",
     "price_usd": 458.73,
     "stock": 0,
-    "image_url": "/images/products/Apple_Watch_Series_10/img_01_c57b487c.jpg",
+    "image_url": null,
     "specs": {
       "model": "Apple Watch Series 10",
       "storage": "41mm",
@@ -1534,7 +1534,7 @@
     "brand": "Apple",
     "price_usd": 512.73,
     "stock": 0,
-    "image_url": "/images/products/Apple_Watch_Series_10/img_01_c57b487c.jpg",
+    "image_url": null,
     "specs": {
       "model": "Apple Watch Series 10",
       "storage": "45mm",
@@ -1557,7 +1557,7 @@
     "brand": "Apple",
     "price_usd": 917.73,
     "stock": 0,
-    "image_url": "/images/products/Apple_Watch_Ultra_2/img_01_98164f94.jpg",
+    "image_url": null,
     "specs": {
       "model": "Apple Watch Ultra 2",
       "storage": "49mm",
@@ -1581,7 +1581,7 @@
     "brand": "Apple",
     "price_usd": 296.73,
     "stock": 0,
-    "image_url": "/images/products/Apple_Watch_SE__2nd_Gen/img_05_858e4e08.jpg",
+    "image_url": null,
     "specs": {
       "model": "Apple Watch SE (2nd Gen)",
       "storage": "40mm",
@@ -1604,7 +1604,7 @@
     "brand": "Apple",
     "price_usd": 323.73,
     "stock": 0,
-    "image_url": "/images/products/Apple_Watch_SE__2nd_Gen/img_05_858e4e08.jpg",
+    "image_url": null,
     "specs": {
       "model": "Apple Watch SE (2nd Gen)",
       "storage": "44mm",
@@ -1627,7 +1627,7 @@
     "brand": "Apple",
     "price_usd": 404.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_11/img_01_91aee24c.jpg",
+    "image_url": null,
     "specs": {
       "model": "iPhone 11",
       "storage": "128GB",
@@ -1649,7 +1649,7 @@
     "brand": "Apple",
     "price_usd": 512.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_12/img_01_c8badf8a.jpg",
+    "image_url": null,
     "specs": {
       "model": "iPhone 12",
       "storage": "128GB",
@@ -1671,7 +1671,7 @@
     "brand": "Apple",
     "price_usd": 701.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_12_Pro/img_01_ab23b6cc.jpg",
+    "image_url": "/images/products/iPhone_17_Pro/primary.png",
     "specs": {
       "model": "iPhone 12 Pro",
       "storage": "256GB",
@@ -1694,7 +1694,7 @@
     "brand": "Apple",
     "price_usd": 782.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_12_Pro_Max/img_01_dfe17e8b.jpg",
+    "image_url": "/images/products/iPhone_16_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 12 Pro Max",
       "storage": "256GB",
@@ -1718,7 +1718,7 @@
     "brand": "Apple",
     "price_usd": 647.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_13_CPO/img_02_a2a8a9ec.jpg",
+    "image_url": "/images/products/iPhone_13/primary.jpg",
     "specs": {
       "model": "iPhone 13 CPO",
       "storage": "128GB",
@@ -1740,7 +1740,7 @@
     "brand": "Apple",
     "price_usd": 647.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_13_Mini/img_02_d1ad6900.jpg",
+    "image_url": "/images/products/iPhone_13/primary.jpg",
     "specs": {
       "model": "iPhone 13 Mini",
       "storage": "128GB",
@@ -1762,7 +1762,7 @@
     "brand": "Apple",
     "price_usd": 728.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_13_Mini/img_02_d1ad6900.jpg",
+    "image_url": "/images/products/iPhone_13/primary.jpg",
     "specs": {
       "model": "iPhone 13 Mini",
       "storage": "256GB",
@@ -1784,7 +1784,7 @@
     "brand": "Apple",
     "price_usd": 836.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_13_Mini/img_02_d1ad6900.jpg",
+    "image_url": "/images/products/iPhone_13/primary.jpg",
     "specs": {
       "model": "iPhone 13 Mini",
       "storage": "512GB",
@@ -1806,7 +1806,7 @@
     "brand": "Apple",
     "price_usd": 998.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_13_Pro/img_02_0d4455bb.jpg",
+    "image_url": "/images/products/iPhone_13/primary.jpg",
     "specs": {
       "model": "iPhone 13 Pro",
       "storage": "256GB",
@@ -1828,7 +1828,7 @@
     "brand": "Apple",
     "price_usd": 1079.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_13_Pro_Max/img_02_a28555d1.jpg",
+    "image_url": "/images/products/iPhone_16_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 13 Pro Max",
       "storage": "256GB",
@@ -1851,7 +1851,7 @@
     "brand": "Apple",
     "price_usd": 1160.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_14_Pro/img_02_504fc63c.jpg",
+    "image_url": "/images/products/iPhone_14/primary.webp",
     "specs": {
       "model": "iPhone 14 Pro",
       "storage": "256GB",
@@ -1873,7 +1873,7 @@
     "brand": "Apple",
     "price_usd": 1268.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_14_Pro_Max/img_02_78c200e1.jpg",
+    "image_url": "/images/products/iPhone_16_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 14 Pro Max",
       "storage": "256GB",
@@ -1896,7 +1896,7 @@
     "brand": "Apple",
     "price_usd": 1295.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_15_Pro/img_01_8994648f.jpg",
+    "image_url": "/images/products/iPhone_15/primary.webp",
     "specs": {
       "model": "iPhone 15 Pro",
       "storage": "256GB",
@@ -1918,7 +1918,7 @@
     "brand": "Apple",
     "price_usd": 1430.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_15_Pro_Max/img_01_2571481d.jpg",
+    "image_url": "/images/products/iPhone_16_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 15 Pro Max",
       "storage": "256GB",
@@ -1941,7 +1941,7 @@
     "brand": "Apple",
     "price_usd": 1133.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16/img_01_a9e2ae15.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16",
       "storage": "256GB",
@@ -1963,7 +1963,7 @@
     "brand": "Apple",
     "price_usd": 1295.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16/img_01_a9e2ae15.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16",
       "storage": "512GB",
@@ -1985,7 +1985,7 @@
     "brand": "Apple",
     "price_usd": 890.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_e/img_02_e7b2ba0f.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16 e",
       "storage": "128GB",
@@ -2007,7 +2007,7 @@
     "brand": "Apple",
     "price_usd": 1160.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_Plus/img_01_f835ae41.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16 Plus",
       "storage": "128GB",
@@ -2029,7 +2029,7 @@
     "brand": "Apple",
     "price_usd": 1268.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_Plus/img_01_f835ae41.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16 Plus",
       "storage": "256GB",
@@ -2051,7 +2051,7 @@
     "brand": "Apple",
     "price_usd": 1430.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_Plus/img_01_f835ae41.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16 Plus",
       "storage": "512GB",
@@ -2073,7 +2073,7 @@
     "brand": "Apple",
     "price_usd": 1349.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_Pro/img_01_9216b1d9.jpg",
+    "image_url": "/images/products/iPhone_16_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 16 Pro",
       "storage": "256GB",
@@ -2095,7 +2095,7 @@
     "brand": "Apple",
     "price_usd": 1538.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_Pro/img_01_9216b1d9.jpg",
+    "image_url": "/images/products/iPhone_16_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 16 Pro",
       "storage": "512GB",
@@ -2143,7 +2143,7 @@
     "brand": "Apple",
     "price_usd": 1430.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_17_Air/img_01_07ad1aa4.png",
+    "image_url": "/images/products/iPhone_17_Air/primary.png",
     "specs": {
       "model": "iPhone 17 Air",
       "storage": "512GB",
@@ -2166,7 +2166,7 @@
     "brand": "Apple",
     "price_usd": 1700.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_17_Air/img_01_07ad1aa4.png",
+    "image_url": "/images/products/iPhone_17_Air/primary.png",
     "specs": {
       "model": "iPhone 17 Air",
       "storage": "1TB",
@@ -2189,7 +2189,7 @@
     "brand": "Apple",
     "price_usd": 1619.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_17_Pro/img_01_224ca228.png",
+    "image_url": "/images/products/iPhone_17_Pro/primary.png",
     "specs": {
       "model": "iPhone 17 Pro",
       "storage": "512GB",
@@ -2212,7 +2212,7 @@
     "brand": "Apple",
     "price_usd": 1889.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_17_Pro/img_01_224ca228.png",
+    "image_url": "/images/products/iPhone_17_Pro/primary.png",
     "specs": {
       "model": "iPhone 17 Pro",
       "storage": "1TB",
@@ -2235,7 +2235,7 @@
     "brand": "Apple",
     "price_usd": 2051.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_17_Pro_Max/img_01_224ca228.jpg",
+    "image_url": "/images/products/iPhone_17_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 17 Pro Max",
       "storage": "1TB",
@@ -2259,7 +2259,7 @@
     "brand": "Apple",
     "price_usd": 2429.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_17_Pro_Max/img_01_224ca228.jpg",
+    "image_url": "/images/products/iPhone_17_Pro_Max/primary.jpg",
     "specs": {
       "model": "iPhone 17 Pro Max",
       "storage": "2TB",
@@ -2283,7 +2283,7 @@
     "brand": "Apple",
     "price_usd": 647.73,
     "stock": 0,
-    "image_url": "/images/products/AirPods_Max/img_01_b7f5bb2c.jpg",
+    "image_url": null,
     "specs": {
       "model": "AirPods Max",
       "storage": "N/A",
@@ -2307,7 +2307,7 @@
     "brand": "Apple",
     "price_usd": 485.73,
     "stock": 0,
-    "image_url": "/images/products/iPad_10/img_02_775555f2.jpg",
+    "image_url": null,
     "specs": {
       "model": "iPad 10",
       "storage": "64GB",
@@ -2330,7 +2330,7 @@
     "brand": "Apple",
     "price_usd": 40.23,
     "stock": 0,
-    "image_url": "/images/products/AirTag/img_01_c6a82380.jpg",
+    "image_url": null,
     "specs": {
       "model": "AirTag",
       "storage": "N/A",
@@ -2353,7 +2353,7 @@
     "brand": "Apple",
     "price_usd": 161.73,
     "stock": 0,
-    "image_url": "/images/products/Apple_Pencil/img_07_3290751c.jpg",
+    "image_url": null,
     "specs": {
       "model": "Apple Pencil",
       "storage": "N/A",
@@ -2376,7 +2376,7 @@
     "brand": "Apple",
     "price_usd": 21.33,
     "stock": 0,
-    "image_url": "/images/products/USB-C_to_Lightning_Cable__1m_/img_01_0bff646f.jpg",
+    "image_url": "/images/products/Charger_USB-C_to_Lightning/primary.jpg",
     "specs": {
       "model": "USB-C to Lightning Cable (1m)",
       "storage": "N/A",
@@ -2399,7 +2399,7 @@
     "brand": "Apple",
     "price_usd": 24.03,
     "stock": 0,
-    "image_url": "/images/products/iPhone_16_Cable_M1/img_03_e3ebd8a6.jpg",
+    "image_url": "/images/products/iPhone_16/primary.webp",
     "specs": {
       "model": "iPhone 16 Cable M1",
       "storage": "N/A",
@@ -2422,7 +2422,7 @@
     "brand": "Samsung",
     "price_usd": 971.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_S24/img_01_dc879081.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy S24",
       "storage": "256GB",
@@ -2445,7 +2445,7 @@
     "brand": "Samsung",
     "price_usd": 1133.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_S24_/img_01_9016e03e.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy S24+",
       "storage": "256GB",
@@ -2468,7 +2468,7 @@
     "brand": "Samsung",
     "price_usd": 809.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_S24_FE/img_01_eb0e7165.jpg",
+    "image_url": "/images/products/Galaxy_S25_FE/primary.jpg",
     "specs": {
       "model": "Galaxy S24 FE",
       "storage": "256GB",
@@ -2491,7 +2491,7 @@
     "brand": "Samsung",
     "price_usd": 1430.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_S24_Ultra/img_02_dc4b6648.jpg",
+    "image_url": "/images/products/Galaxy_S25_Ultra/primary.jpg",
     "specs": {
       "model": "Galaxy S24 Ultra",
       "storage": "256GB",
@@ -2515,7 +2515,7 @@
     "brand": "Samsung",
     "price_usd": 1025.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_S25/img_02_e234acc6.jpg",
+    "image_url": "/images/products/Galaxy_S25/primary.jpg",
     "specs": {
       "model": "Galaxy S25",
       "storage": "128GB",
@@ -2538,7 +2538,7 @@
     "brand": "Samsung",
     "price_usd": 134.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A06/img_01_a88f4397.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy A06",
       "storage": "64GB",
@@ -2561,7 +2561,7 @@
     "brand": "Samsung",
     "price_usd": 161.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A06/img_01_a88f4397.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy A06",
       "storage": "128GB",
@@ -2584,7 +2584,7 @@
     "brand": "Samsung",
     "price_usd": 215.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A16/img_01_bfc1dcb6.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy A16",
       "storage": "128GB",
@@ -2606,7 +2606,7 @@
     "brand": "Samsung",
     "price_usd": 269.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A16/img_01_bfc1dcb6.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy A16",
       "storage": "256GB 8GB RAM",
@@ -2628,7 +2628,7 @@
     "brand": "Samsung",
     "price_usd": 404.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A36/img_02_04aab5d7.jpg",
+    "image_url": "/images/products/Galaxy_A36/primary.jpg",
     "specs": {
       "model": "Galaxy A36",
       "storage": "256GB",
@@ -2650,7 +2650,7 @@
     "brand": "Samsung",
     "price_usd": 458.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A36/img_02_04aab5d7.jpg",
+    "image_url": "/images/products/Galaxy_A36/primary.jpg",
     "specs": {
       "model": "Galaxy A36",
       "storage": "256GB 12GB RAM",
@@ -2672,7 +2672,7 @@
     "brand": "Samsung",
     "price_usd": 485.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A55/img_01_f210dd0c.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy A55",
       "storage": "128GB",
@@ -2694,7 +2694,7 @@
     "brand": "Samsung",
     "price_usd": 539.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A55/img_01_f210dd0c.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy A55",
       "storage": "256GB",
@@ -2716,7 +2716,7 @@
     "brand": "Samsung",
     "price_usd": 647.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_A56/img_01_7132925f.jpg",
+    "image_url": "/images/products/Galaxy_A56/primary.jpg",
     "specs": {
       "model": "Galaxy A56",
       "storage": "256GB 12GB RAM",
@@ -2738,7 +2738,7 @@
     "brand": "Samsung",
     "price_usd": 1295.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Z_Flip_7/img_01_4c76357d.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Z Flip 7",
       "storage": "256GB",
@@ -2762,7 +2762,7 @@
     "brand": "Samsung",
     "price_usd": 2240.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Z_Fold_7/img_02_0429b826.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Z Fold 7",
       "storage": "256GB",
@@ -2786,7 +2786,7 @@
     "brand": "Samsung",
     "price_usd": 121.23,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Buds_FE/img_01_cbf6c2e6.jpg",
+    "image_url": "/images/products/Galaxy_Buds_3/primary.webp",
     "specs": {
       "model": "Galaxy Buds FE",
       "storage": "N/A",
@@ -2809,7 +2809,7 @@
     "brand": "Samsung",
     "price_usd": 215.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Tab_A9/img_01_f6a9a85b.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Tab A9",
       "storage": "64GB",
@@ -2832,7 +2832,7 @@
     "brand": "Samsung",
     "price_usd": 269.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Tab_A9_Plus/img_01_893160cb.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Tab A9+",
       "storage": "64GB",
@@ -2855,7 +2855,7 @@
     "brand": "Samsung",
     "price_usd": 323.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Tab_A9_Plus/img_01_893160cb.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Tab A9+",
       "storage": "128GB",
@@ -2878,7 +2878,7 @@
     "brand": "Samsung",
     "price_usd": 350.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Watch_7/img_01_b36bf958.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Watch 7",
       "storage": "44mm",
@@ -2901,7 +2901,7 @@
     "brand": "Samsung",
     "price_usd": 431.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Watch_7_Classic/img_01_b36bf958.jpg",
+    "image_url": null,
     "specs": {
       "model": "Galaxy Watch 7 Classic",
       "storage": "46mm",
@@ -2925,7 +2925,7 @@
     "brand": "Samsung",
     "price_usd": 620.73,
     "stock": 0,
-    "image_url": "/images/products/Galaxy_Watch_Ultra/img_01_13fc452e.jpg",
+    "image_url": "/images/products/Galaxy_S25_Ultra/primary.jpg",
     "specs": {
       "model": "Galaxy Watch Ultra",
       "storage": "49mm + Cell",
@@ -2949,7 +2949,7 @@
     "brand": "Xiaomi",
     "price_usd": 107.73,
     "stock": 0,
-    "image_url": "/images/products/Redmi_A3/img_03_f6337907.jpg",
+    "image_url": null,
     "specs": {
       "model": "Redmi A3",
       "storage": "4GB/128GB",
@@ -2972,7 +2972,7 @@
     "brand": "Xiaomi",
     "price_usd": 121.23,
     "stock": 0,
-    "image_url": "/images/products/Redmi_A5/img_02_3a7004a9.jpg",
+    "image_url": null,
     "specs": {
       "model": "Redmi A5",
       "storage": "64GB",
@@ -2995,7 +2995,7 @@
     "brand": "Xiaomi",
     "price_usd": 148.23,
     "stock": 0,
-    "image_url": "/images/products/Redmi_A5/img_02_3a7004a9.jpg",
+    "image_url": null,
     "specs": {
       "model": "Redmi A5",
       "storage": "128GB",
@@ -3018,7 +3018,7 @@
     "brand": "Xiaomi",
     "price_usd": 188.73,
     "stock": 0,
-    "image_url": "/images/products/Redmi_14C/img_02_4c6ce71f.jpg",
+    "image_url": null,
     "specs": {
       "model": "Redmi 14C",
       "storage": "128GB",
@@ -3040,7 +3040,7 @@
     "brand": "Xiaomi",
     "price_usd": 229.23,
     "stock": 0,
-    "image_url": "/images/products/Redmi_14C/img_02_4c6ce71f.jpg",
+    "image_url": null,
     "specs": {
       "model": "Redmi 14C",
       "storage": "256GB",
@@ -3062,7 +3062,7 @@
     "brand": "Xiaomi",
     "price_usd": 323.73,
     "stock": 0,
-    "image_url": "/images/products/Redmi_Note_14/img_02_b1eb80f1.jpg",
+    "image_url": null,
     "specs": {
       "model": "Redmi Note 14",
       "storage": "256GB",
@@ -3085,7 +3085,7 @@
     "brand": "Xiaomi",
     "price_usd": 431.73,
     "stock": 0,
-    "image_url": "/images/products/Redmi_Note_14_Pro/img_01_cdff0bee.jpg",
+    "image_url": "/images/products/Xiaomi_Note_15_PRO/primary.png",
     "specs": {
       "model": "Redmi Note 14 Pro",
       "storage": "256GB",
@@ -3158,7 +3158,7 @@
     "brand": "Xiaomi",
     "price_usd": 94.23,
     "stock": 0,
-    "image_url": "/images/products/Xiaomi_Buds_6/img_01_e7034b0f.jpg",
+    "image_url": "/images/products/Xiaomi_Buds_6_Play/primary.jpg",
     "specs": {
       "model": "Buds 6",
       "storage": "N/A",
@@ -3181,7 +3181,7 @@
     "brand": "JBL",
     "price_usd": 40.23,
     "stock": 0,
-    "image_url": "/images/products/Tune_125/img_01_23fd9b30.jpg",
+    "image_url": null,
     "specs": {
       "model": "Tune 125",
       "storage": "N/A",
@@ -3204,7 +3204,7 @@
     "brand": "JBL",
     "price_usd": 53.73,
     "stock": 0,
-    "image_url": "/images/products/Tune_520/img_01_a0ace758.jpg",
+    "image_url": null,
     "specs": {
       "model": "Tune 520",
       "storage": "N/A",
@@ -3227,7 +3227,7 @@
     "brand": "JBL",
     "price_usd": 80.73,
     "stock": 0,
-    "image_url": "/images/products/Tune_Beam/img_01_ee69bca2.jpg",
+    "image_url": null,
     "specs": {
       "model": "Tune Beam",
       "storage": "N/A",
@@ -3250,7 +3250,7 @@
     "brand": "JBL",
     "price_usd": 67.23,
     "stock": 0,
-    "image_url": "/images/products/Wave_Flex/img_01_db446f6a.jpg",
+    "image_url": null,
     "specs": {
       "model": "Wave Flex",
       "storage": "N/A",
@@ -3273,7 +3273,7 @@
     "brand": "JBL",
     "price_usd": 75.33,
     "stock": 0,
-    "image_url": "/images/products/Wave_Beam/img_03_3cfab400.jpg",
+    "image_url": null,
     "specs": {
       "model": "Wave Beam",
       "storage": "N/A",
@@ -3296,7 +3296,7 @@
     "brand": "Blackview",
     "price_usd": 121.23,
     "stock": 0,
-    "image_url": "/images/products/Tab_Kids_50/img_01_3c0cc4ce.jpg",
+    "image_url": null,
     "specs": {
       "model": "Tab Kids 50",
       "storage": "64GB 3GB RAM",
@@ -3319,7 +3319,7 @@
     "brand": "Nokia",
     "price_usd": 48.33,
     "stock": 0,
-    "image_url": "/images/products/105_4G/img_01_7cf57264.jpg",
+    "image_url": null,
     "specs": {
       "model": "105 4G",
       "storage": "4GB",
@@ -3342,7 +3342,7 @@
     "brand": "Nokia",
     "price_usd": 53.73,
     "stock": 0,
-    "image_url": "/images/products/110_4G/img_03_f9da2365.jpg",
+    "image_url": null,
     "specs": {
       "model": "110 4G",
       "storage": "4GB",
@@ -3388,7 +3388,7 @@
     "brand": "Blackview",
     "price_usd": 134.73,
     "stock": 0,
-    "image_url": "/images/products/N2000/img_02_31420442.jpg",
+    "image_url": null,
     "specs": {
       "model": "N2000",
       "storage": "64GB",
@@ -3517,7 +3517,7 @@
     "brand": "Samsung",
     "price_usd": 944.73,
     "stock": 10,
-    "image_url": "/images/products/Galaxy_S26_Plus/primary.jpg",
+    "image_url": "/images/products/Galaxy_S26/primary.jpg",
     "specs": {
       "model": "Galaxy S26+",
       "storage": "256GB",
@@ -3543,7 +3543,7 @@
     "brand": "Samsung",
     "price_usd": 1052.73,
     "stock": 10,
-    "image_url": "/images/products/Galaxy_S26_Plus/primary.jpg",
+    "image_url": "/images/products/Galaxy_S26/primary.jpg",
     "specs": {
       "model": "Galaxy S26+",
       "storage": "512GB",
