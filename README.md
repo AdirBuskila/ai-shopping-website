@@ -32,6 +32,23 @@ docker compose exec backend python scripts/embed_products.py
 It needs a real `OPENAI_API_KEY` in `.env`; without one, `/chat` returns a friendly
 "assistant unavailable" message (the rest of the API is unaffected).
 
+### Churn prediction (ML bonus)
+
+`GET /ml/churn/{user_id}` returns `{probability, label, top_factors}` from the user's
+live RFM + engagement features. The trained model ships in the repo
+(`backend/app/ml/artifacts/churn_model.joblib`); to reproduce it:
+
+```bash
+python ml_training/generate_dataset.py   # synthetic labeled data -> data/churn_dataset.csv
+python ml_training/train_churn.py         # LogReg vs RF -> report.md + artifact
+```
+
+For a populated demo, seed synthetic customers with order history:
+
+```bash
+docker compose exec backend python scripts/seed_synthetic_users.py
+```
+
 ## Documentation
 
 - Design spec: `docs/superpowers/specs/`
