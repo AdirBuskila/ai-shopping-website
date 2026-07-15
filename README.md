@@ -49,6 +49,20 @@ For a populated demo, seed synthetic customers with order history:
 docker compose exec backend python scripts/seed_synthetic_users.py
 ```
 
+## Storefront (Next.js)
+
+A polished storefront (Shop, Favorites, Orders/checkout, and an AI Chat page) lives in
+`frontend/`. With the backend running (`docker compose up`), start it:
+
+```bash
+cd frontend
+npm install
+npm run dev        # http://localhost:3000
+```
+
+The API allows CORS from `http://localhost:3000` by default. Set
+`NEXT_PUBLIC_API_URL` if the backend runs elsewhere.
+
 ## Documentation
 
 - Design spec: `docs/superpowers/specs/`
