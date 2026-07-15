@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Heart, Smartphone } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
@@ -20,6 +21,7 @@ export function ProductCard({ product }: { product: Product }) {
   const [busy, setBusy] = useState(false);
   const [imgError, setImgError] = useState(false);
 
+  const href = `/products/${product.id}`;
   const outOfStock = product.stock <= 0;
   const favorited = has(product.id);
   const showImage = product.image_url && !imgError;
@@ -50,21 +52,23 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-border-strong hover:shadow-lg">
       <div className="relative aspect-square overflow-hidden bg-surface-soft">
-        {showImage ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={product.image_url!}
-            alt={product.name}
-            loading="lazy"
-            onError={() => setImgError(true)}
-            className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
-          />
-        ) : (
-          <div className="flex h-full flex-col items-center justify-center gap-2 text-ink-subtle">
-            <Smartphone className="h-12 w-12" strokeWidth={1.25} />
-            <span className="text-xs font-semibold uppercase tracking-wide">{product.brand ?? "Device"}</span>
-          </div>
-        )}
+        <Link href={href} className="block h-full w-full">
+          {showImage ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={product.image_url!}
+              alt={product.name}
+              loading="lazy"
+              onError={() => setImgError(true)}
+              className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full flex-col items-center justify-center gap-2 text-ink-subtle">
+              <Smartphone className="h-12 w-12" strokeWidth={1.25} />
+              <span className="text-xs font-semibold uppercase tracking-wide">{product.brand ?? "Device"}</span>
+            </div>
+          )}
+        </Link>
 
         <button
           onClick={onFavorite}
@@ -89,9 +93,11 @@ export function ProductCard({ product }: { product: Product }) {
         {product.brand && (
           <p className="mb-0.5 text-[10px] font-bold uppercase tracking-[0.12em] text-ink-muted">{product.brand}</p>
         )}
-        <h3 className="line-clamp-2 text-base font-extrabold leading-tight text-ink transition-colors group-hover:text-accent-hover">
-          {product.name.replace(/^(Apple|Samsung|Xiaomi)\s+/, "")}
-        </h3>
+        <Link href={href}>
+          <h3 className="line-clamp-2 text-base font-extrabold leading-tight text-ink transition-colors group-hover:text-accent-hover">
+            {product.name.replace(/^(Apple|Samsung|Xiaomi)\s+/, "")}
+          </h3>
+        </Link>
 
         <div className="flex-1" />
 

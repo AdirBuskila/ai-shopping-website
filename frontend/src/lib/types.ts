@@ -36,11 +36,18 @@ export interface Order {
   items: OrderItem[];
 }
 
+export interface ProductRef {
+  id: number;
+  name: string;
+  image_url?: string | null;
+  price_usd: number;
+}
+
 export interface ChatResponse {
   reply: string;
   remaining_prompts: number;
   available: boolean;
-  sources: string[];
+  sources: ProductRef[];
 }
 
 export interface RegisterData {

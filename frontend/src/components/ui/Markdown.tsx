@@ -17,7 +17,21 @@ export function Markdown({ children }: { children: string }) {
         "[&_h1]:mt-2 [&_h1]:text-base [&_h1]:font-bold [&_h2]:mt-2 [&_h2]:text-base [&_h2]:font-bold [&_h3]:font-bold",
       ].join(" ")}
     >
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          // The assistant should never embed images; drop any that slip through
+          // so a broken-image icon never appears in a reply.
+          img: () => null,
+          a: ({ href, children }) => (
+            <a href={href} target="_blank" rel="noreferrer">
+              {children}
+            </a>
+          ),
+        }}
+      >
+        {children}
+      </ReactMarkdown>
     </div>
   );
 }

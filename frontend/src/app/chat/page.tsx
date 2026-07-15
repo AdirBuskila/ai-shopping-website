@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Sparkles, Send, RotateCcw, Package } from "lucide-react";
+import { Sparkles, Send, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
 import { Spinner } from "@/components/ui/Spinner";
 import { cn } from "@/lib/utils";
 import { Markdown } from "@/components/ui/Markdown";
+import { ChatSources } from "@/components/store/ChatSources";
 import { useChat } from "@/hooks/useChat";
 
 const SUGGESTIONS = [
@@ -93,15 +94,7 @@ export default function ChatPage() {
               ) : (
                 <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
               )}
-              {m.sources && m.sources.length > 0 && (
-                <div className="mt-2 flex flex-wrap gap-1.5 border-t border-border pt-2">
-                  {m.sources.slice(0, 4).map((s) => (
-                    <span key={s} className="inline-flex items-center gap-1 text-xs text-ink-muted">
-                      <Package className="h-3 w-3" /> {s}
-                    </span>
-                  ))}
-                </div>
-              )}
+              {m.role === "assistant" && m.sources && <ChatSources sources={m.sources} />}
             </div>
           </div>
         ))}

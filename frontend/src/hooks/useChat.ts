@@ -2,12 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "@/lib/api";
-import type { ChatResponse } from "@/lib/types";
+import type { ChatResponse, ProductRef } from "@/lib/types";
 
 export interface ChatMessage {
   role: "user" | "assistant";
   content: string;
-  sources?: string[];
+  sources?: ProductRef[];
 }
 
 export function useChat() {
