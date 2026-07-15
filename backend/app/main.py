@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.controllers import auth, favorites, health, orders, products
+from app.controllers import auth, chat, favorites, health, orders, products
 
 
 def create_app() -> FastAPI:
@@ -10,6 +10,7 @@ def create_app() -> FastAPI:
     app.include_router(products.router)
     app.include_router(favorites.router)
     app.include_router(orders.router)
+    app.include_router(chat.router)
     return app
 
 
