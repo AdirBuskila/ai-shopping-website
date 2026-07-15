@@ -13,6 +13,7 @@ import pathlib
 import numpy as np
 
 CHURN_RATE = 0.4
+LABEL_NOISE = 0.08  # fraction of labels flipped → realistic irreducible error
 DATA = pathlib.Path(__file__).resolve().parent / "data" / "churn_dataset.csv"
 
 
@@ -20,15 +21,17 @@ def sample_rows(n: int, seed: int = 42) -> list[dict]:
     rng = np.random.default_rng(seed)
     rows = []
     for _ in range(n):
-        churn = int(rng.random() < CHURN_RATE)
-        if churn:  # disengaged: rare buyer, long since last seen, few favorites
-            frequency = int(max(0, rng.poisson(1.5)))
-            recency = float(np.clip(rng.normal(140, 50), 1, 400))
-            favorites = int(max(0, rng.poisson(1)))
-        else:      # engaged: frequent buyer, recent, more favorites
-            frequency = int(max(0, rng.poisson(8)))
-            recency = float(np.clip(rng.normal(25, 20), 0, 400))
-            favorites = int(max(0, rng.poisson(4)))
+        latent = int(rng.random() < CHURN_RATE)  # behaviour-generating class
+        if latent:  # disengaged: rarer buyer, longer since last seen, fewer favorites
+            frequency = int(max(0, rng.poisson(3)))
+            recency = float(np.clip(rng.normal(95, 55), 1, 400))
+            favorites = int(max(0, rng.poisson(2)))
+        else:       # engaged: more frequent buyer, recent, more favorites
+            frequency = int(max(0, rng.poisson(6)))
+            recency = float(np.clip(rng.normal(45, 40), 0, 400))
+            favorites = int(max(0, rng.poisson(3)))
+        # observed label may disagree with behaviour (mislabelling / real-world noise)
+        churn = latent if rng.random() >= LABEL_NOISE else 1 - latent
 
         tenure = float(np.clip(rng.normal(365, 150), 30, 900))
         recency = min(recency, tenure)  # can't have been seen before signup

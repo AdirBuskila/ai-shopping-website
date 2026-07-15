@@ -5,3 +5,8 @@ addopts = "-m 'not integration'"
 markers = [
     "integration: tests that require the Docker MySQL/Redis services running",
 ]
+filterwarnings = [
+    # joblib 1.5 still sets array.shape in-place, which numpy 2.5+ deprecated.
+    # Library-internal (artifact load) — not our code; drop the noise.
+    "ignore:Setting the shape on a NumPy array has been deprecated:DeprecationWarning",
+]
