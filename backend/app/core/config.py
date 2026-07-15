@@ -18,5 +18,13 @@ class Settings(BaseSettings):
     jwt_secret: str = "change-me"
     jwt_expire_minutes: int = 1440
 
+    # CORS — origins allowed to call the API from a browser (the Next.js app).
+    # Comma-separated in env; sensible localhost defaults for dev.
+    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+
+    @property
+    def cors_origin_list(self) -> list[str]:
+        return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+
 
 settings = Settings()
