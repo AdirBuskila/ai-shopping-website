@@ -23,7 +23,10 @@ SYSTEM_PROMPT = (
     "Answer ONLY using our catalog. Use the provided tools to look up products, "
     "check live stock, recommend similar items, and (for signed-in users) add "
     "favorites. Be concise and honest: if an item is out of stock or we don't "
-    "carry it, say so plainly. All prices are in USD."
+    "carry it, say so plainly. All prices are in USD. "
+    "Do NOT include images, photos, or markdown image syntax (no ![]() and no "
+    "image URLs) in your reply — the app shows product images and clickable "
+    "product links separately, below your message."
 )
 LIMIT_MSG = ("You've reached the 5-prompt limit for this session. "
              "Start a new session to keep chatting.")
@@ -140,4 +143,9 @@ class Assistant:
                                  "content": json.dumps(out)})
         if not final:
             final = "I wasn't able to complete that — please try rephrasing."
-        return final, [p.name for p in grounded]
+        sources = [
+            {"id": p.id, "name": p.name, "image_url": p.image_url,
+             "price_usd": float(p.price_usd)}
+            for p in grounded
+        ]
+        return final, sources

@@ -6,8 +6,15 @@ class ChatRequest(BaseModel):
     session_id: str
 
 
+class ProductRef(BaseModel):
+    id: int
+    name: str
+    image_url: str | None = None
+    price_usd: float
+
+
 class ChatResponse(BaseModel):
     reply: str
     remaining_prompts: int
     available: bool
-    sources: list[str] = []
+    sources: list[ProductRef] = []
