@@ -35,7 +35,7 @@ export function Header({ authSlot }: { authSlot?: React.ReactNode }) {
                 href={href}
                 title={label}
                 className={cn(
-                  "flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-sm font-medium transition-colors sm:px-3",
+                  "flex items-center gap-1.5 rounded-lg px-2 py-2 text-sm font-medium transition-colors sm:px-3",
                   active ? "bg-surface-muted text-ink" : "text-ink-muted hover:bg-surface-muted hover:text-ink",
                 )}
               >

@@ -17,13 +17,16 @@ export function AuthMenu() {
 
   if (!user) {
     return (
-      <div className="flex items-center gap-2">
-        <Link href="/login" className="rounded-lg px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink">
+      <div className="flex items-center gap-1.5 sm:gap-2">
+        <Link
+          href="/login"
+          className="hidden rounded-lg px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink sm:inline-block"
+        >
           Log in
         </Link>
         <Link
           href="/register"
-          className="rounded-lg bg-ink px-3.5 py-2 text-sm font-semibold text-white hover:bg-ink-soft"
+          className="rounded-lg bg-ink px-3 py-2 text-sm font-semibold text-white hover:bg-ink-soft sm:px-3.5"
         >
           Sign up
         </Link>

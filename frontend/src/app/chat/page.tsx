@@ -37,23 +37,23 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="mx-auto flex h-[calc(100vh-9rem)] max-w-3xl flex-col px-4 py-6">
-      <div className="flex items-center justify-between pb-4">
-        <div className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-gradient text-white">
+    <div className="mx-auto flex h-[calc(100dvh-6.5rem)] w-full max-w-4xl flex-col px-3 py-4 sm:px-4 sm:py-6">
+      <div className="flex items-center justify-between gap-2 pb-3 sm:pb-4">
+        <div className="flex min-w-0 items-center gap-2">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-gradient text-white">
             <Sparkles className="h-5 w-5" />
           </span>
-          <div>
-            <h1 className="text-lg font-bold leading-tight">Shopping assistant</h1>
-            <p className="text-xs text-ink-muted">Grounded in our live catalog</p>
+          <div className="min-w-0">
+            <h1 className="truncate text-base font-bold leading-tight sm:text-lg">Shopping assistant</h1>
+            <p className="hidden text-xs text-ink-muted sm:block">Grounded in our live catalog</p>
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           {remaining !== null && (
-            <Badge variant={blocked ? "danger" : "neutral"}>{remaining} prompts left</Badge>
+            <Badge variant={blocked ? "danger" : "neutral"}>{remaining} left</Badge>
           )}
           <button onClick={reset} className="flex items-center gap-1 text-sm text-ink-muted hover:text-ink">
-            <RotateCcw className="h-3.5 w-3.5" /> New chat
+            <RotateCcw className="h-3.5 w-3.5" /> <span className="hidden sm:inline">New chat</span>
           </button>
         </div>
       </div>
