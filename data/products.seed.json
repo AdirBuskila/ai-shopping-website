@@ -276,7 +276,7 @@
     "brand": "Apple",
     "price_usd": 688.23,
     "stock": 10,
-    "image_url": "/images/products/iPhone_15/primary.webp",
+    "image_url": "/images/products/iPhone_15/secondary.jpg",
     "specs": {
       "model": "iPhone 15",
       "storage": "128GB",
@@ -300,7 +300,7 @@
     "brand": "Apple",
     "price_usd": 769.23,
     "stock": 10,
-    "image_url": "/images/products/iPhone_15/primary.webp",
+    "image_url": "/images/products/iPhone_15/secondary.jpg",
     "specs": {
       "model": "iPhone 15",
       "storage": "256GB",
@@ -1896,7 +1896,7 @@
     "brand": "Apple",
     "price_usd": 1295.73,
     "stock": 0,
-    "image_url": "/images/products/iPhone_15/primary.webp",
+    "image_url": "/images/products/iPhone_15/secondary.jpg",
     "specs": {
       "model": "iPhone 15 Pro",
       "storage": "256GB",
