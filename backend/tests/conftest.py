@@ -20,6 +20,9 @@ class _FakeCache:
     def setex(self, key, ttl, value):
         pass
 
+    def delete(self, key):
+        pass
+
 
 @pytest.fixture
 def _engine():
