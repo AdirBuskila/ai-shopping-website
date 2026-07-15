@@ -29,6 +29,9 @@ SYSTEM_PROMPT = (
     "and recommend the nearest IN-STOCK alternative instead — never present an "
     "out-of-stock item as a recommendation, and never say 'nothing is available' "
     "when in-stock alternatives exist. "
+    "Lead with your single best recommendation first, then optionally mention "
+    "alternatives. Always write each product's NAME and its PRICE in bold using "
+    "markdown (e.g. **Phone Line F34 32GB** for **$72.63**). "
     "Do NOT include images, photos, or markdown image syntax (no ![]() and no "
     "image URLs) in your reply — the app shows product images and clickable "
     "product links separately, below your message."
@@ -159,10 +162,26 @@ class Assistant:
                                  "content": json.dumps(out)})
         if not final:
             final = "I wasn't able to complete that — please try rephrasing."
-        # Only in-stock products appear as recommended source cards.
+        # Order the source cards to match the reply: whichever product the model
+        # mentioned first becomes the featured (first) card; unmentioned ones follow.
+        ranked = sorted(in_stock, key=lambda p: self._mention_pos(p, final))
         sources = [
             {"id": p.id, "name": p.name, "image_url": p.image_url,
              "price_usd": float(p.price_usd)}
-            for p in in_stock[:4]
+            for p in ranked[:4]
         ]
         return final, sources
+
+    def _mention_pos(self, product, reply: str) -> int:
+        """Index at which the product is mentioned in the reply (big number if
+        not mentioned), so mentioned products sort first, earliest-first."""
+        low = reply.lower()
+        i = low.find(product.name.lower())
+        if i >= 0:
+            return i
+        parts = product.name.split(" ", 1)  # drop leading brand word, try the model
+        if len(parts) > 1:
+            j = low.find(parts[1].lower())
+            if j >= 0:
+                return j
+        return len(reply) + 1
