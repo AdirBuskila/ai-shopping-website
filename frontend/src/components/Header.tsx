@@ -21,7 +21,7 @@ export function Header({ authSlot }: { authSlot?: React.ReactNode }) {
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-gradient text-white">
             <ShoppingBag className="h-4 w-4" />
           </span>
-          <span className="text-lg">NovaShop</span>
+          <span className="text-lg">Shopwise</span>
         </Link>
 
         <nav className="ml-2 hidden items-center gap-1 sm:flex">

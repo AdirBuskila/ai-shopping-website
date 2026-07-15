@@ -36,7 +36,7 @@ export default function LoginPage() {
     <div className="mx-auto max-w-sm py-10">
       <Card className="p-6">
         <h1 className="text-2xl font-bold tracking-tight">Welcome back</h1>
-        <p className="mt-1 text-sm text-ink-muted">Log in to your NovaShop account.</p>
+        <p className="mt-1 text-sm text-ink-muted">Log in to your Shopwise account.</p>
         <form onSubmit={onSubmit} className="mt-6 space-y-3">
           <Input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
           <Input

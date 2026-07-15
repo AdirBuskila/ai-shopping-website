@@ -8,7 +8,7 @@ import { AuthMenu } from "@/components/AuthMenu";
 const rubik = Rubik({ variable: "--font-body", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NovaShop — AI-powered electronics store",
+  title: "Shopwise — AI-powered electronics store",
   description: "Browse, search, and shop electronics with an AI assistant that knows the catalog.",
 };
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Header authSlot={<AuthMenu />} />
           <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">{children}</main>
           <footer className="border-t border-border py-6 text-center text-xs text-ink-subtle">
-            NovaShop · a course project · FastAPI + Next.js + OpenAI
+            Shopwise · a course project · FastAPI + Next.js + OpenAI
           </footer>
         </Providers>
       </body>
