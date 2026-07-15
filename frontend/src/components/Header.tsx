@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Heart, ShoppingBag, Sparkles, Store } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useCart } from "@/context/CartContext";
 
 const NAV = [
   { href: "/", label: "Shop", icon: Store },
@@ -14,6 +15,7 @@ const NAV = [
 
 export function Header({ authSlot }: { authSlot?: React.ReactNode }) {
   const pathname = usePathname();
+  const { count } = useCart();
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-surface/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-2 px-4">
@@ -38,6 +40,11 @@ export function Header({ authSlot }: { authSlot?: React.ReactNode }) {
               >
                 <Icon className="h-4 w-4" />
                 {label}
+                {href === "/orders" && count > 0 && (
+                  <span className="ml-0.5 grid h-5 min-w-5 place-items-center rounded-full bg-accent px-1 text-[11px] font-bold text-white">
+                    {count}
+                  </span>
+                )}
               </Link>
             );
           })}
