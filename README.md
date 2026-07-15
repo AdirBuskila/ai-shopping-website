@@ -18,6 +18,19 @@ and auto-seeds the catalog (151 products)** — no extra steps.
 - Swagger:  http://localhost:8000/docs
 - Health:   http://localhost:8000/health
 - Products: http://localhost:8000/products
+- Chat:     `POST http://localhost:8000/chat` — the AI shopping assistant
+
+### AI assistant (RAG + tools)
+
+The `/chat` assistant is grounded in the catalog via a **Redis vector index**. The
+index builds **lazily on the first chat request**, or you can build it up front:
+
+```bash
+docker compose exec backend python scripts/embed_products.py
+```
+
+It needs a real `OPENAI_API_KEY` in `.env`; without one, `/chat` returns a friendly
+"assistant unavailable" message (the rest of the API is unaffected).
 
 ## Documentation
 
