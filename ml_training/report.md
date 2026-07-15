@@ -4,27 +4,26 @@
 
 | Model | Accuracy | ROC-AUC | Precision | Recall | F1 |
 |---|---|---|---|---|---|
-| logreg ⭐ | 0.786 | 0.849 | 0.785 | 0.668 | 0.722 |
-| rf | 0.778 | 0.822 | 0.757 | 0.688 | 0.720 |
+| logreg ⭐ | 0.788 | 0.852 | 0.780 | 0.683 | 0.728 |
+| rf | 0.776 | 0.837 | 0.764 | 0.668 | 0.713 |
 
 ## Confusion matrix (served model)
 
 Rows = actual, Cols = predicted `[retain, churn]`.
 
 ```
-[[254  38]
- [ 69 139]]
+[[252  40]
+ [ 66 142]]
 ```
 
 ## Logistic-regression coefficients (feature influence on churn)
 
 | Feature | Coefficient |
 |---|---|
-| recency_days | +0.759 |
-| frequency | -1.434 |
-| monetary | +0.336 |
-| tenure_days | -0.042 |
-| avg_order_value | -0.336 |
-| favorites_count | -0.447 |
+| recency_days | +0.748 |
+| frequency | -0.992 |
+| monetary | -0.239 |
+| tenure_days | -0.045 |
+| favorites_count | -0.443 |
 
 _Positive coefficient → raises churn risk; negative → lowers it._

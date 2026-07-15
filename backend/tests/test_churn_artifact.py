@@ -1,9 +1,9 @@
 from app.ml.churn_model import is_ready, predict_from_vector
 
 # FEATURE_NAMES order:
-# [recency_days, frequency, monetary, tenure_days, avg_order_value, favorites_count]
-CHURNER = [180, 0, 0, 300, 0, 0]        # gone quiet, never bought, no favorites
-KEEPER = [5, 12, 4000, 300, 333, 6]     # recent, frequent, big spender, engaged
+# [recency_days, frequency, monetary, tenure_days, favorites_count]
+CHURNER = [180, 0, 0, 300, 0]           # gone quiet, never bought, no favorites
+KEEPER = [5, 12, 4000, 300, 6]          # recent, frequent, big spender, engaged
 
 
 def test_artifact_is_ready():

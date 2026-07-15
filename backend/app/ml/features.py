@@ -9,12 +9,15 @@ from datetime import datetime, timezone
 from app.core.enums import OrderStatus
 from app.models import Favorite, Order, User
 
+# Model features. avg_order_value (= monetary / frequency) is intentionally NOT a
+# model input: being a deterministic combination of frequency and monetary it adds
+# no information and makes the linear coefficients collinear/uninterpretable. We
+# still compute and RETURN it below for display context.
 FEATURE_NAMES = [
     "recency_days",
     "frequency",
     "monetary",
     "tenure_days",
-    "avg_order_value",
     "favorites_count",
 ]
 
