@@ -140,8 +140,10 @@ class ToolExecutor:
         return {"products": self._serialize(rows[:SEARCH_LIMIT])}
 
     def _semantic_search(self, query) -> dict:
-        ids = self.store.knn(self.embed_fn(query), TOP_K)
-        return {"products": self._serialize(self._load_by_ids(ids))}
+        ids = self.store.knn(self.embed_fn(query), TOP_K * 2)
+        rows = self._load_by_ids(ids)
+        rows.sort(key=lambda p: p.stock <= 0)  # in-stock first, for recommendations
+        return {"products": self._serialize(rows[:TOP_K])}
 
     def _get_product_details(self, product_id) -> dict:
         p = self.products.get(product_id)
@@ -160,8 +162,10 @@ class ToolExecutor:
         p = self.products.get(product_id)
         if not p:
             return {"error": "product not found"}
-        ids = self.store.knn(self.embed_fn(build_blob(p)), TOP_K, exclude_id=product_id)
-        return {"products": self._serialize(self._load_by_ids(ids))}
+        ids = self.store.knn(self.embed_fn(build_blob(p)), TOP_K * 2, exclude_id=product_id)
+        rows = self._load_by_ids(ids)
+        rows.sort(key=lambda x: x.stock <= 0)  # in-stock first
+        return {"products": self._serialize(rows[:TOP_K])}
 
     def _add_to_favorites(self, product_id) -> dict:
         if self.user is None:

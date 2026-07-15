@@ -15,6 +15,7 @@ from app.core.config import settings
 from app.models import Product
 
 TOP_K = 5
+RETRIEVE_K = 12  # wider net so in-stock alternatives surface even when the top matches are sold out
 MAX_TOOL_ROUNDS = 3
 COUNTER_TTL = 86400  # 1 day
 
@@ -22,8 +23,12 @@ SYSTEM_PROMPT = (
     "You are the shopping assistant for an online electronics store. "
     "Answer ONLY using our catalog. Use the provided tools to look up products, "
     "check live stock, recommend similar items, and (for signed-in users) add "
-    "favorites. Be concise and honest: if an item is out of stock or we don't "
-    "carry it, say so plainly. All prices are in USD. "
+    "favorites. All prices are in USD. "
+    "IMPORTANT — only ever RECOMMEND products that are IN STOCK. If the closest "
+    "match to what the user wants is out of stock, briefly note it's unavailable "
+    "and recommend the nearest IN-STOCK alternative instead — never present an "
+    "out-of-stock item as a recommendation, and never say 'nothing is available' "
+    "when in-stock alternatives exist. "
     "Do NOT include images, photos, or markdown image syntax (no ![]() and no "
     "image URLs) in your reply — the app shows product images and clickable "
     "product links separately, below your message."
@@ -105,14 +110,22 @@ class Assistant:
                 self.db.query(Product).filter(Product.id.in_(ids)).all()}
         return [rows[i] for i in ids if i in rows]
 
-    def _context_block(self, products) -> str:
-        if not products:
-            return "No catalog matches were retrieved for this query."
-        lines = ["Relevant products from our live catalog "
-                 "(use tools for full details or actions):"]
-        for p in products:
-            status = f"{p.stock} in stock" if p.stock > 0 else "OUT OF STOCK"
-            lines.append(f"- [id {p.id}] {p.name} — ${float(p.price_usd):.2f}, {status}")
+    def _context_block(self, in_stock, out_stock) -> str:
+        lines = []
+        if in_stock:
+            lines.append("IN-STOCK products relevant to the request "
+                         "— recommend ONLY from these:")
+            for p in in_stock[:8]:
+                lines.append(f"- [id {p.id}] {p.name} — ${float(p.price_usd):.2f}, "
+                             f"{p.stock} in stock")
+        else:
+            lines.append("No in-stock products closely match this request.")
+        if out_stock:
+            lines.append("")
+            lines.append("Also matched but OUT OF STOCK — do NOT recommend these; "
+                         "mention only if the user asks about them specifically:")
+            for p in out_stock[:4]:
+                lines.append(f"- [id {p.id}] {p.name} — OUT OF STOCK")
         return "\n".join(lines)
 
     def _run(self, message: str):
@@ -120,10 +133,13 @@ class Assistant:
         if self.store.is_empty():
             build_index(self.db, self.store)  # lazy first-time build
 
-        grounded = self._load(self.store.knn(self.embed_fn(message), TOP_K))
+        candidates = self._load(self.store.knn(self.embed_fn(message), RETRIEVE_K))
+        in_stock = [p for p in candidates if p.stock > 0]
+        out_stock = [p for p in candidates if p.stock <= 0]
+
         messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "system", "content": self._context_block(grounded)},
+            {"role": "system", "content": self._context_block(in_stock, out_stock)},
             {"role": "user", "content": message},
         ]
         executor = ToolExecutor(self.db, self.store, self.embed_fn, self.user)
@@ -143,9 +159,10 @@ class Assistant:
                                  "content": json.dumps(out)})
         if not final:
             final = "I wasn't able to complete that — please try rephrasing."
+        # Only in-stock products appear as recommended source cards.
         sources = [
             {"id": p.id, "name": p.name, "image_url": p.image_url,
              "price_usd": float(p.price_usd)}
-            for p in grounded
+            for p in in_stock[:4]
         ]
         return final, sources
