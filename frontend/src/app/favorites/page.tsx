@@ -34,7 +34,7 @@ export default function FavoritesPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-10">
       <div className="flex items-center gap-2">
         <Heart className="h-6 w-6 fill-danger text-danger" />
         <h1 className="text-3xl font-bold tracking-tight">Favorites</h1>

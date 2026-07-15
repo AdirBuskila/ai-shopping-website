@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
 import { Spinner } from "@/components/ui/Spinner";
 import { cn } from "@/lib/utils";
+import { Markdown } from "@/components/ui/Markdown";
 import { useChat } from "@/hooks/useChat";
 
 const SUGGESTIONS = [
@@ -35,7 +36,7 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="mx-auto flex h-[calc(100vh-12rem)] max-w-3xl flex-col">
+    <div className="mx-auto flex h-[calc(100vh-9rem)] max-w-3xl flex-col px-4 py-6">
       <div className="flex items-center justify-between pb-4">
         <div className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-gradient text-white">
@@ -87,7 +88,11 @@ export default function ChatPage() {
                   : "bg-surface-muted text-ink",
               )}
             >
-              <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
+              {m.role === "assistant" ? (
+                <Markdown>{m.content}</Markdown>
+              ) : (
+                <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
+              )}
               {m.sources && m.sources.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1.5 border-t border-border pt-2">
                   {m.sources.slice(0, 4).map((s) => (

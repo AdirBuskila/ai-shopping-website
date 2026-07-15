@@ -37,7 +37,7 @@ export default function OrdersPage() {
   const history = orders.filter((o) => o.status === "CLOSE");
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+    <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[1fr_1.1fr]">
       <section className="space-y-4">
         <h1 className="text-2xl font-bold tracking-tight">Cart</h1>
         <CartPanel />

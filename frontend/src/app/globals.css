@@ -33,7 +33,16 @@
 
   /* Brand secondary — deep indigo */
   --brand-purple: #4f46e5;
+  --brand-purple-hover: #4338ca;
+  --brand-purple-active: #3730a3;
   --brand-purple-soft: #e0e7ff;
+
+  /* Xiaomi brand band (teal → deep green) */
+  --brand-xiaomi: #0d9488;
+  --brand-xiaomi-deep: #064e3b;
+
+  /* Display font (same Rubik family, tighter tracking via .font-display) */
+  --font-display: var(--font-body);
 
   /* Signature gradient */
   --brand-gradient: linear-gradient(135deg, #312e81 0%, #4338ca 30%, #4f46e5 60%, #2563eb 100%);
@@ -128,6 +137,16 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* Break an element out of a constrained parent to span the full viewport width. */
+.full-bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
 body {
   background: var(--surface-soft);

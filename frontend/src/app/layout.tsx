@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-full flex flex-col font-sans">
         <Providers>
           <Header authSlot={<AuthMenu />} />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">{children}</main>
+          <main className="w-full flex-1">{children}</main>
           <footer className="border-t border-border py-6 text-center text-xs text-ink-subtle">
             Shopwise · a course project · FastAPI + Next.js + OpenAI
           </footer>

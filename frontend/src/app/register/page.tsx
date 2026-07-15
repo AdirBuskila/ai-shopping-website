@@ -35,7 +35,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="mx-auto max-w-sm py-10">
+    <div className="mx-auto max-w-sm px-4 py-14">
       <Card className="p-6">
         <h1 className="text-2xl font-bold tracking-tight">Create your account</h1>
         <p className="mt-1 text-sm text-ink-muted">Join Shopwise to save favorites and check out.</p>
