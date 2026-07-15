@@ -27,3 +27,18 @@ def get_current_user(
     if user is None:
         raise exc
     return user
+
+
+def get_optional_user(
+    token: str | None = Depends(oauth2_scheme),
+    db: Session = Depends(get_db),
+) -> User | None:
+    """Like get_current_user but returns None instead of raising when the caller
+    is anonymous — used by the chat endpoint (browsing is allowed logged-out;
+    only the add_to_favorites tool needs a real user)."""
+    if not token:
+        return None
+    sub = decode_token(token)
+    if sub is None:
+        return None
+    return db.get(User, int(sub))
