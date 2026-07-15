@@ -26,20 +26,21 @@ export function Header({ authSlot }: { authSlot?: React.ReactNode }) {
           <span className="text-lg">Shopwise</span>
         </Link>
 
-        <nav className="ml-2 hidden items-center gap-1 sm:flex">
+        <nav className="ml-1 flex items-center gap-0.5 sm:ml-2 sm:gap-1">
           {NAV.map(({ href, label, icon: Icon }) => {
             const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
             return (
               <Link
                 key={href}
                 href={href}
+                title={label}
                 className={cn(
-                  "flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                  "flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-sm font-medium transition-colors sm:px-3",
                   active ? "bg-surface-muted text-ink" : "text-ink-muted hover:bg-surface-muted hover:text-ink",
                 )}
               >
                 <Icon className="h-4 w-4" />
-                {label}
+                <span className="hidden sm:inline">{label}</span>
                 {href === "/orders" && count > 0 && (
                   <span className="ml-0.5 grid h-5 min-w-5 place-items-center rounded-full bg-accent px-1 text-[11px] font-bold text-white">
                     {count}
